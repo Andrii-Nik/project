@@ -23,27 +23,22 @@ for (let i = 0; i < 2; i++) {
     const a = prompt('Один из последних просмотренных фильмов?', ''),
           b = prompt('На сколько оцените его?', '');
 
-    if (a !=null && b !=null && a !='' & b !='' && a.length < 50) {
-        personalMovieDB.movies[a] = b;
-        console.log('done');
-    } else {
-        console.log('error');
-        i--;
-    }   
+        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+            personalMovieDB.movies[a] = b;
+            console.log('Good');
+        }  else  {
+            console.log('Bad');
+            i--;
+        }   
 }
 
 if (personalMovieDB.count < 10) {
-    console.log("Просмотрено довольно мало фильмов!");
-} else if (personalMovieDB.count >= 10 & personalMovieDB.count < 30) {
-    console.log("Вы классический зритель!");
+    console.log('Мало');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    console.log('Klassik');
 } else if (personalMovieDB.count >= 30) {
-    console.log('Вы киноман');
+    console.log('Kinoman');
 } else {
-    console.log('Oshibka proizoshla');
+    console.log('Eror');
 }
-
 console.log(personalMovieDB);
-
-
-
-
